@@ -27,14 +27,14 @@
 
     <form id="form-details">
         <div class="container d-flex flex-column">
-            <label for="username" class="d-block">Username:</label>
-            <input required type="text" id="username" name="Username" class="border-0 rounded p-1 pl-2 pr-2 ">
+            <label for="name" class="d-block">Username:</label>
+            <input required type="text" id="name" name="name" class="border-0 rounded p-1 pl-2 pr-2 ">
         </div>
 
 
         <div class="container d-flex flex-column mt-3">
             <label for="email" class="d-block">Email</label>
-            <input required type="email" id="email" name="Email" class="border-0 rounded p-1 pl-2 pr-2 ">
+            <input required type="email" id="email" name="email" class="border-0 rounded p-1 pl-2 pr-2 ">
         </div>
 
 
@@ -156,14 +156,14 @@
 
 
 
-          let table = `<table style = 'width: 50%'><tr><th>Name</th><th>Email</th><th>Password</th><th>dob</th><th>Accepted terms?</th></tr> ${table_entries} </table>`;
+          let table = `<table style = 'width: 50%;border: 1px solid white;'><tr style = 'border: 1px solid white'><th>Name</th><th>Email</th><th>Password</th><th>Dob</th><th>Accepted terms?</th></tr> ${table_entries} </table>`;
           let details = document.getElementById("user-entries");
           details.innerHTML = table;
         }
 
         let save_details = (event) => {
           event.preventDefault();
-          let name = document.getElementById("username").value;
+          let name = document.getElementById("name").value;
           console.log(name);
           let email = document.getElementById("email").value;
           let password = document.getElementById("password").value;
